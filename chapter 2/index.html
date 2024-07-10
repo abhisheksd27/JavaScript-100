@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    1. What are variables ? what is the difference brtween them?
+    <br/>
+    Variables are containers for storing data values. They are created when a program runs, and they have a memory location assigned to them. They can be declared with a specific data type, and their values can be changed.
+    <br/>
+    Difference between variables:
+    <br/>
+    - Variables in JavaScript are dynamically typed, meaning they don't need to be declared with a specific data type.
+    <br/>
+    - Variables in JavaScript can be declared anywhere in the code, and their scope is determined by the location of their declaration
+    <br/>
+    <br/>
+
+    2. What is the difference between var , const and let?
+    <br/>
+    Ans:-var, const, and let are used to declare variables in JavaScript.
+    <br/>
+    - var: It is a function-scoped variable, meaning it is visible within the function in which it is declared. It has a global scope if it is not declared inside a function.
+    <br/>
+    - const: It is a block-scoped variable, meaning it is visible within the block in which it is declared. It cannot be reassigned once it is declared.
+    <br/>
+    - let: It is a block-scoped variable, meaning it is visible within the block in which it is declared. It can be reassigned.
+    <br/>
+    <script>
+        // var example
+        var a =20
+        var a = 30
+        function example(){
+            if(true){
+                var count =10;
+                console.log(count); // Output: 10
+            }
+        }
+        example();
+        // console.log(count)not defined
+        console.log(a) //30
+        
+        // const example
+        const b = 20
+        // b = 30; // This will throw an error
+        
+        // let example
+        let c = 20
+        c = 30
+        console.log(c) // Output: 30
+    </script>
+    <br/>
+    <br/>
+
+    3.what are data types in js?
+    <br/>
+    Ans:-A data type determines the type of the variable
+    <br/>
+    <br/>
+    4.What are the difference between primitive and non-primitive data types?
+    <br/>
+    Ans:-Primitive data types are immutable (cannot be changed once they are created) and include: number, string, boolean, undefined, null, symbol
+    <br/>
+    primitive data types can hold only single value
+    <br/>
+    ere the new value is stored in other memory address
+    <script>
+        let age=25;
+        age=30
+        // here the new value is stored in other memory address
+    </script>
+    
+    <br/>
+    <br/>
+    Non-primitive data types are mutable (can be changed once they are created) and include: object, array, function
+    <br/>
+    Non-primitive data types can hold multiple values
+    <script>
+        let person = {name: "John", age: 30};
+        person.age=35
+        // here the new value is stored in the same memory address
+    </script>
+    <br/>
+    <br/>
+
+    5. what is the difference between null and undefined in js?
+    <br/>
+    Ans:-Null is an object that has been intentionally created as "empty" or "nothing"
+    <br/>
+    undefined is a variable that has not been assigned a value
+    <br/>
+
+    <script>
+        let d;
+        console.log(d) // Output: undefined
+        a=null;
+        console.log(d) // Output: null
+    </script>
+    <br/>
+    <br/>
+
+    6. what is the difference between == and === in js?
+    <br/>
+    Ans:- == checks value 
+    <br/>
+    === checks value, type
+    <br/>
+    <br/>
+
+
+    7. what is the use of typeOf opeartor?
+    <br/>
+    Ans:-typeof operator is used to check the type of a variable
+    <br/>
+    <script>
+        let e = 20;
+        console.log(typeof e) // Output: number
+        let f = "hello";
+        console.log(typeof f) // Output: string
+        let g = true;
+        console.log(typeof g) // Output: boolean
+        let h = null;
+        console.log(typeof h) // Output: object
+        let i = undefined;
+        console.log(typeof i) // Output: undefined
+        let j = function(){};
+        console.log(typeof j) // Output: function
+    </script>
+
+    <br/>
+    <br/>
+
+    8. what is the type corrcion in js?
+    <br/>
+    Ans:-Type coercion is the automatic conversion of one data type to another data type
+    <br/>
+    <script>
+        let k = 20 + "20";
+        console.log(k) // Output: "2020"
+
+        let l = 20 + true;
+        console.log(l) // Output: 21
+
+        let m = "hello" + 20;
+        console.log(m) // Output: "hello20"
+
+        let n = "hello" + true;
+        console.log(n) // Output: "hellotrue"
+
+        let o = 20 + null;
+        console.log(o) // Output: 20
+
+        let p = 20 + undefined;
+        console.log(p) // Output: NaN
+
+        let q = "hello" + null;
+        console.log(q) // Output: "hellonull"
+
+        let r = "hello" + undefined;
+        console.log(r) // Output: "helloundefined"
+
+        let s = 20 + function(){};
+        console.log(s) // Output: "20function (){}"
+
+        let t = "hello" + function(){};
+        console.log(t) // Output: "hellofunction (){}"
+
+        let u = 20 + {};
+        console.log(u) // Output: "20[object Object]"
+
+        let v = "hello" + {};
+        console.log(v) // Output: "hello[object Object]"
+
+        let w = 20 + [];
+        console.log(w) // Output: "20"
+
+        let x = "hello" + [];
+        console.log(x) // Output: "hello"
+
+
+    </script>
+
+
+
+
+    
+</body>
+</html>

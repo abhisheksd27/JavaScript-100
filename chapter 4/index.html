@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    1. What are arrays in js ? how to get, add and remove them?
+    <br/>
+    Ans:- An array is a datatype which allows u to store multiple values in a single variable
+    <br/>
+    Example: let arr = [1, 2, 3, 4, 5];
+    <br/>
+    Get methods:-
+    <br/>
+    a. indexOf()
+    <br/>
+    <script>
+        let arr = [1, 2, 3, 4, 5];
+        console.log(arr.indexOf(3)); // Output: 2
+    </script>
+    <br/>
+    b. lastIndexOf()
+    <br/>
+    <script>
+        let arr1 = [1, 2, 3, 4, 5];
+        console.log(arr.lastIndexOf(3)); // Output: 2
+    </script>
+    <br/>
+    c. find()
+    <br/>
+    <script>
+        let arr2 = [1, 2, 3, 4, 5];
+        console.log(arr2.find(x => x > 3)); // Output: 4
+    </script>
+    d.filter()
+    <br/>
+    <script>
+        let arr3 = [1, 2, 3, 4, 5];
+        console.log(arr3.filter(x => x > 3)); // Output: [4, 5]
+    </script>
+    e. slice()
+    <br/>
+    <script>
+        let arr4 = [1, 2, 3, 4, 5];
+        console.log(arr4.slice(2)); // Output: [3, 4, 5]
+    </script>
+
+    Add methods:-
+    <br/>
+    a. push()
+    <br/>
+    <script>
+        let arr5 = [1, 2, 3, 4, 5];
+        arr5.push(6);
+        console.log(arr5); // Output: [1, 2, 3, 4, 5, 6]
+    </script>
+    <br>
+    b. concat()
+    <br/>
+    <script>
+        let arr6 = [1, 2, 3];
+        let arr7 = [4, 5, 6];
+        console.log(arr6.concat(arr7)); // Output: [1, 2, 3, 4, 5, 6]
+    </script>
+
+    Remove methods:-
+    <br/>
+    a. pop()
+    <br/>
+    <script>
+        let arr8 = [1, 2, 3, 4, 5];
+        arr8.pop();
+        console.log(arr8); // Output: [1, 2, 3, 4]
+    </script>
+    <br/>
+    b. shift()
+    <br/>
+    <script>
+        let arr9 = [1, 2, 3, 4, 5];
+        arr9.shift();
+        console.log(arr9); // Output: [2, 3, 4, 5]
+    </script>
+    <br/>
+    c. splice()
+    <br/>
+    <script>
+        let arr10 = [1, 2, 3, 4, 5];
+        arr10.splice(2, 1);
+        console.log(
+            arr10 // Output: [1, 2, 4, 5]
+        );
+        arr10.splice(1, 0, 3);
+        console.log(
+            arr10 // Output: [1, 3, 2, 4, 5]
+        );
+    </script>
+    
+    <br/>
+    <br/>
+
+    2. what is the difference between find() and filter()  and slice() methods of an array?
+    <br/>
+    Ans:- The find() method returns the value of the first element in the provided array that satisfies the provided testing function. If no element satisfies the condition, it returns undefined.
+    <script>
+        let arr11 = [1, 2, 3, 4, 5];
+        console.log(arr11.find(x => x > 3)); // Output: 4
+    </script>
+    <br/>
+    The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+    <script>
+        let arr12 = [1, 2, 3, 4, 5];
+        console.log(arr12.filter(x => x > 3)); // Output: [4, 5]
+    </script>
+    <br/>
+    The slice() method returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included).
+    <script>
+        let arr13 = [1, 2, 3, 4, 5];
+        console.log(arr13.slice(2)); // Output: [3, 4, 5]
+    </script>
+    <br/>
+    <br/>
+
+
+    3. what is the difference between push() and concat() methods pf an array?
+    <br/>
+    Ans:- The push() method adds one or more elements to the end of an array and returns the new length of the array.
+    <script>
+        let arr14 = [1, 2, 3, 4, 5];
+        arr14.push(6);
+        console.log(arr14); // Output: [1, 2, 3, 4, 5, 6]
+    </script>
+    <br/>
+    The concat() method returns a new array that is the result of concatenating all of the arrays and/or values provided.
+    <script>
+        let arr15 = [1, 2, 3];
+        let arr16 = [4, 5, 6];
+        console.log(arr15.concat(arr16)); // Output: [1, 2, 3, 4, 5, 6]
+
+    </script>
+    <br/>
+    <br/>
+
+    4. What is the difference between pop() and shift() methods of an array?
+    <br/>
+    Ans:- The pop() method removes the last element from an array and returns that element.
+    <script>
+        let arr17 = [1, 2, 3, 4, 5];
+        arr17.pop();
+        console.log(arr17); // Output: [1, 2, 3, 4]
+    </script>
+    <br/>
+    The shift() method removes the first element from an array and returns that element.
+    <script>
+        let arr18 = [1, 2, 3, 4, 5];
+        arr18.shift();
+        console.log(arr18); // Output: [2, 3, 4, 5]
+    </script>
+    <br/>
+    <br/>
+
+    5. What is the difference between splice() and slice() methods of an array?
+    <br/>
+    Ans:- The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+    <script>
+        let arr19 = [1, 2, 3, 4, 5];
+        arr19.splice(2, 1);
+        console.log(
+            arr19 // Output: [1, 2, 4, 5]
+        );
+        arr19.splice(1, 0, 3);
+        console.log(
+            arr19 // Output: [1, 3, 2, 4, 5]
+        );
+    </script>
+    <br/>
+    <br/>
+
+
+    6. What is the difference between map() and forEach() array methods in iteration?
+    <br/>
+    Ans:- The map() method creates a new array with the results of calling a provided function on every element in the calling array.
+    <script>
+        let arr20 = [1, 2, 3, 4, 5];
+        console.log(arr20.map(x => x * 2)); // Output: [2, 4, 6, 8, 10]
+    </script>
+    <br/>
+    The forEach() method executes a provided function once for each array element.
+    <script>
+        let arr21 = [1, 2, 3, 4, 5];
+        arr21.forEach(x => console.log(x * 2)); // Output: 2, 4, 6, 8, 10
+    </script>
+    <br/>
+    <br/>
+
+
+    7. how to sort and reverse and array?
+    <br/>
+    Ans:- To sort an array in ascending order, you can use the sort() method.
+    <script>
+        let arr22 = [5, 3, 8, 1, 2];
+        arr22.sort((a, b) => a - b); // Output: [1, 2, 3, 5, 8]
+    </script>
+    <br/>
+    To sort an array in descending order, you can use the sort() method with a custom comparison function.
+    <script>
+        let arr23 = [5, 3, 8, 1, 2];
+        arr23.sort((a, b) => b - a); // Output: [8, 5, 3, 2, 1]
+    </script>
+    <br/>
+    To reverse an array, you can use the reverse() method.
+    <script>
+        let arr24 = [5, 3, 8, 1, 2];
+        arr24.reverse(); // Output: [2, 1, 8, 3, 5]
+    </script>
+    <br/>
+    <br/>
+
+
+    8.What is array Destructuring in Js?
+    <br/>
+    Ans:- it allows u to exttract elements from an array and assign them into individual variables in a single statement
+    <br/>
+    <script>
+        let arr25 = [1, 2, 3, 4, 5];
+        let [a, b, c, d, e] = arr25;
+        console.log(a, b, c, d, e); // Output: 1 2 3 4 5
+    </script>
+
+    <br/>
+    <br/>
+
+
+
+    9. what are array-like Objects in Js?
+    <br/>
+    Ans:- Array like objects are objects that have indexed elements and a length property , similar to arrays, but they may not have all the methods of array like push(), pop() and others
+    <br/>
+    <br/>
+
+
+    10. How to convert an array-like object into an array?
+    <br/>
+    Ans:- You can convert an array-like object into an array using the Array.from() method.
+    <script>
+        let arrayLikeObject = { 0: 'a', 1: 'b', 2: 'c', length: 3 };
+        let arr26 = Array.from(arrayLikeObject);
+        console.log(arr26); // Output: ['a', 'b', 'c']
+    </script>
+    <br/>
+    using spread syntax(...)
+    <br/>
+    <script>
+        let arrayLikeObject1  = { 0: 'a', 1: 'b', 2: 'c', length: 3 };
+        let arr27 = [...arrayLikeObject1];
+        console.log(arr27); // Output: ['a', 'b', 'c']
+    </script>
+    <br/>
+    <br/>
+
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+    
+    
+</body>
+</html>

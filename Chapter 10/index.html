@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+
+    1. What are Objects in js?<br/>
+    Ans:- An object is a data type that allows you to store key-value pairs
+    <br/>
+    <script>
+        let person = {
+            name: "John Doe",
+            age: 30,
+            city: "New York"
+        };
+        console.log(person); // Output: {name: "John Doe", age: 30, city: "New York"}
+    </script>
+
+
+    <br/>
+    <br/>
+    2. in how many ways we can create an object?<br/>
+    Ans:- There are 3 ways to create an object in JavaScript:<br/>
+    - Object Literal Notation <br/>
+    <script>
+        let person1 = {
+            name: "John Doe",
+            age: 30,
+            city: "New York"
+        };
+        console.log(person1); // Output: {name: "John Doe", age: 30, city: "New York"}
+    </script>
+
+    
+    - Object Constructor <br/>
+    <script>
+        var person3=new Object();
+        person3.name="John Doe";
+        person3.age=30;
+        person3.city="New York";
+        console.log(person3); // Output: {name: "John Doe", age: 30, city: "New York"}
+    </script>
+    
+    - Object.create() method<br/>
+    <script>
+        var person4=Object.create({name:"John Doe",age:30,city:"New York"});
+        console.log(person4); // Output: {name: "John Doe", age: 30, city: "New York"}
+    </script>
+
+
+    <br/>
+    <br/>
+    3. What is the difference between an array and an object?<br/>
+    Ans:<br/>
+    - An array is a data structure that allows you to store multiple values in an ordered collection, typically accessed using numerical indices.<br/>
+    - An object is a data structure that allows you to store key-value pairs, where keys are typically strings or symbols used to access their corresponding values.<br/>
+
+    <script>
+        let arr = [1, 2, 3, 4, 5];
+        let obj = {name: "John Doe", age: 30, city: "New York"};
+        console.log(arr[0]); // Output: 1
+        console.log(obj.name); // Output: John Doe
+    </script>
+
+    <br/>
+    <br/>
+    4. how do you add or modify or delete properties of an object?<br/>
+    Ans:- <br/>
+    - To add a new property to an object, you can use dot notation or bracket notation.<br/>
+    <script>
+        let person7 = {name: "John Doe", age: 30, city: "New York"};
+        person7.hobbies = ["reading", "painting"];
+        console.log(person7); // Output: {name: "John Doe", age: 30, city: "New York", hobbies: ["reading", "painting"]}
+    </script>
+    
+    - To modify an existing property, you can use dot notation or bracket notation.<br/>
+    <script>
+        let person5 = {name: "John Doe", age: 30, city: "New York"};
+        person5.age = 35;
+        console.log(person5); // Output: {name: "John Doe", age: 35, city: "New York"}
+    </script>
+    
+    - To delete a property from an object, you can use the delete keyword or the property assignment operator.<br/>
+    <script>
+        let person6 = {name: "John Doe", age: 30, city: "New York"};
+        delete person6.age;
+        console.log(person6); // Output: {name: "John Doe", city: "New York"}
+    </script>
+
+    <br/>
+    <br/>
+    5. Explain the difference between dot notation and bracket notation?<br/>
+    Ans:<br/>
+    - Dot notation is used to access properties of an object using the dot operator, while bracket notation
+    is used to access properties of an object using the square bracket operator.
+    <script>
+        let person8 = {name: "John Doe", age: 30, city: "New York"};
+        console.log(person8.name); // Output: John Doe
+        console.log(person8["age"]); // Output: 30
+    </script>
+
+    <br/>
+    <br/>
+    6. what are some common methods to ityerate  over the properties of an object?<br/>
+    Ans:<br/>
+    - For..in loop: This loop iterates over the properties of an object using the dot notation or bracket notation.<br/>
+    <script>
+        let person9 = {name: "John Doe", age: 30, city: "New York"};
+        for (let key in person9) {
+            console.log(key, person9[key]);
+        }
+    </script>
+
+    - Object.keys() and Object.values(): These methods return an array of keys or values for an object, respectively.<br/>
+    <script>
+        let person10 = {name: "John Doe", age: 30, city: "New York"};
+        console.log(Object.keys(person10)); // Output: ["name", "age", "city"]
+        console.log(Object.values(person10)); // Output: ["John Doe", 30, "New York"]
+    </script>
+
+    - forEach() <br/>
+    <script>
+        let person11 = {name: "John Doe", age: 30, city: "New York"};
+        person11.forEach((value, key) => {
+            console.log(key, value);
+        });
+        // Output: name John Doe
+        // Output: age 30
+        // Output: city New York
+    </script>
+
+
+    <br/>
+    <br/>
+    7. how do you check if property exist or notation?<br/>
+    Ans:<br/>
+    -using the "in" operator . <br/>
+    <script>
+        let person12 = {name: "John Doe", age: 30, city: "New York"};
+        console.log("name" in person12); // Output: true
+        console.log("hobbies" in person12); // Output: false
+    </script>
+
+    -using hasOwnProperty(). <br/>
+    <script>
+        let person13 = {name: "John Doe", age: 30, city: "New York"};
+        console.log(person13.hasOwnProperty("name")); // Output: true
+        console.log(person13.hasOwnProperty("hobbies")); // Output: false
+    </script>
+
+    -comparing with undefined. <br/>
+    <script>
+        let person14 = {name: "John Doe", age: 30, city: "New York"};
+        console.log(person14.name === undefined); // Output: false
+        console.log(person14.hobbies === undefined); // Output: true
+    </script>
+
+    <br/>
+    <br/>
+
+
+    8. how do yopu clone or copy an object?<br/>
+    ans:- <br/>
+    - Spread Syntax. <br/>
+    <script>
+        let person15 = {name: "John Doe", age: 30, city: "New York"};
+        let person16 = {...person15};
+        console.log(person16); // Output: {name: "John Doe", age: 30, city: "New York"}
+    </script>
+
+    -object.assign() . <br/>
+    <script>
+        let person17 = {name: "John Doe", age: 30, city: "New York"};
+        let person18 = Object.assign({}, person17);
+        console.log(person18); // Output: {name: "John Doe", age: 30, city: "New York"}
+    </script>
+
+    - JSON.parse() and JSON.stringyfy() .<br/>
+    <script>
+        let person19 = {name: "John Doe", age: 30, city: "New York"};
+        let person20 = JSON.parse(JSON.stringify(person19));
+        console.log(person20); // Output: {name: "John Doe", age: 30, city: "New York"}
+    </script>
+
+    <br/>
+    <br/>
+    9. what is the difference between deep copy and shallow copy in js?<br/>
+    Ans:<br/>
+    - Deep copy creates a completely independent copy of an object, including its nested objects and arrays. It recursively copies all the properties and values, including any nested objects or arrays.. <br/>
+    <script>
+        let person21 = {name: "John Doe", age: 30, city: "New York"};
+        let person22 = JSON.parse(JSON.stringify(person21));
+        person22.name = "Jane Doe";
+        console.log(person21.name); // Output: John Doe
+        console.log(person22.name); // Output: Jane Doe
+    </script>
+
+    - Shallow copy creates a new object and only copies the reference to the original object's properties and values.
+     It does not create a completely independent copy of the object, including any nested objects or arrays. <br/>
+    <script>
+        let person23 = {name: "John Doe", age: 30, city: "New York"};
+        let person24 = {...person23};
+        person24.name = "Jane Doe";
+        console.log(person23.name); // Output: John Doe
+        console.log(person24.name); // Output: Jane Doe
+        console.log(person23 === person24); // Output: false
+        console.log(person23.age === person24.age); // Output: true
+        console.log(person23.city === person24.city); // Output: true
+    </script>
+
+
+    <br/>
+    <br/>
+    10.  What is Set Objects in JS?<br/>
+    - Set objects are similar to arrays, but they only allow unique values. They are created using the Set() constructor or the new keyword. <br/>
+    <script>
+        let mySet = new Set([1, 2, 3, 2, 4]);
+        console.log(mySet); // Output: Set {1, 2, 3, 4}
+    </script>
+    - Set objects have methods like add(), delete(), has(), and clear(). <br/>
+    <script>
+        let mySet1 = new Set();
+        mySet1.add(1);
+        mySet1.add(2);
+        mySet1.add(3);
+        console.log(mySet1.has(2)); // Output: true
+        console.log(mySet1.has(4)); // Output: false
+        mySet1.delete(2);
+        console.log(mySet1.has(2)); // Output: false
+        mySet1.clear();
+        console.log(mySet1.size); // Output: 0
+    </script>
+    
+
+
+    <br/>
+    <br/>
+    11. What is Map Objects in JS?<br/>
+    Ans:- <br/>
+    - Map objects are similar to objects, but they allow key-value pairs. They are created using the Map() constructor or the new keyword. <br/>
+    <script>
+        let myMap1 = new Map([[1, "one"], [2, "two"], [3, "three"]]);
+        console.log(myMap1); // Output: Map {1 => "one", 2 => "two", 3 => "three"}
+    </script>
+    - Map objects have methods like set(), get(), delete(), has(), and clear(). <br/>
+    <script>
+        let myMap2 = new Map();
+        myMap2.set(1, "one");
+        myMap2.set(2, "two");
+        myMap2.set(3, "three");
+        console.log(myMap2.get(2)); // Output: two
+        console.log(myMap2.has(4)); // Output: false
+        myMap2.delete(2);
+        console.log(myMap2.has(2)); // Output: false
+        myMap2.clear();
+        console.log(myMap2.size); // Output: 0
+    </script>
+    - Map objects can be iterated over using the forEach() method or using a for...of loop. <br/>
+    =The map object is a collection of key-value pairs where each key can be any type, and each value can also be any type.<br/>
+    - Map objects are more efficient for storing and retrieving key-value pairs compared to objects. <br/>
+
+
+    <br/>
+    <br/>
+    12. What is the difference between Map and Object in JS?
+    Ans:<br/>
+    - Objects are collections of key-value pairs. They are created using the Object() constructor or the new keyword. Objects have properties and methods, and they can have any type as keys and values. <br/>
+    <script>
+        let person25 = {name: "John Doe", age: 30, city: "New York"};
+        console.log(person25.name); // Output: John Doe
+        console.log(person25.hasOwnProperty("name")); // Output: true
+    </script>
+    - Map objects are similar to objects, but they allow key-value pairs. They are created using the Map() constructor or the new keyword. Map objects have properties and methods, and they can have any type as keys and values. <br/>
+    <script>
+        let myMap3 = new Map([[1, "one"], [2, "two"], [3, "three"]]);
+        console.log(myMap3.get(2)); // Output: two
+        console.log(myMap3.has(2)); // Output: true
+    </script>
+    - Map objects are more efficient for storing and retrieving key-value pairs compared to objects. <br/>
+    - Map objects can be iterated over using the forEach() method or using a for...of loop. <br/>
+    - Map objects are more flexible and easier to use compared to objects. <br/>
+    - Map objects can have nested objects and arrays as values. Objects cannot have nested objects and arrays as values. <br/>
+    - Map objects can have duplicate keys, but objects cannot have duplicate keys. <br/>
+
+    <br/>
+    <br/>
+    
+</body>
+</html>

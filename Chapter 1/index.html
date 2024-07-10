@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Basics</title>
+</head>
+<body>
+    1.What is JS? what is the role of JS engine?
+    <br/>
+    Ans:- JS is a programming language that is used for converting static web pages to interavtive and dynamic web pages.
+    <br/>
+    every engine has js engines to execute js(chrome - v8)
+    <br/>
+    A JS engine is a program present in web browser that executes js code.
+    <br/>
+
+
+
+    <br/>
+    <br/>
+    2.What are client side and serverside?
+    <br/>
+    Ans:- Client side - is a device ,application or software component that requests and consumes services or resourcess from a server
+    <br/>
+    Server us a device , computer or software application that provides services , resources or function to clients
+    <br/>
+    <br/>
+
+    3.What is scope in JS?
+    <br/>
+    Ans:- Scope is the visibility and accessibility of variables, functions, and objects in a particular part of a program.
+    <br/>
+    Global scope - variables defined outside of any function have global scope and can be accessed from anywhere in the program
+    <br/>
+    Local scope - variables defined inside a function have local scope and can only be accessed within that function
+    <br/>
+    <br/>
+
+
+    4.what is the type of a variable in JS when it is declared without using the var let or const keywords?
+    <br/>
+    Ans:- var 
+    <script>
+        if(true){
+            variable=10
+        }
+        console.log(variable)
+        // 10
+    </script>
+    
+    <br/>
+    <br/>
+
+    5.What is hoisting in JS?
+    <br/>
+    <script>
+        myFunction()
+        function myFunction() {
+            console.log("Hello World");
+        }
+        // Hello World
+    </script>
+    Ans:- Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution.
+    <br/>
+    <script>
+        //variable hoisting
+        x=10
+        console.log(x) // 10
+        var x;
+    </script>
+    let and const doesnt allow hoisting
+    <br/>
+    <br/>
+
+
+    6.What is the difference between let and const in JS?
+    <br/>
+    Ans:- let and const are block scope variables.
+    <br/>
+    let - let is block scoped and can be reassigned.
+    <br/>
+    const - const is block scoped and cannot be reassigned.
+    <br/>
+    <br/>
+
+    7.what is JSON?
+    <br/>
+    Ans:- JSON stands for JavaScript Object Notation.
+    <br/>
+    It is a lightweight data interchange format
+    <br/>
+    JSon consiste of key value pairs
+    <br/>
+    {
+        "name": "John Doe",
+        "age": 30
+        "city": "New York",
+    }
+    
+
+
+
+    
+</body>
+</html>

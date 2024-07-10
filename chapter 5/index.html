@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    1.What is a loop? what are the types of loops in js?
+    <br/>
+    A loop is a programming way to run a piece of code repeatedly until a certain condition is met
+    <br/>
+    <script>
+        // Types of loops in JavaScript
+        // 1. For Loop
+        for (let i = 0; i < 5; i++) {
+            console.log(i);
+        }
+
+        // 2. While Loop
+        let j = 0;
+        while (j < 5) {
+            console.log(j);
+            j++;
+        }
+
+        // 3. Do-While Loop
+        let k = 0;
+        do {
+            console.log(k);
+            k++;
+        } while (k < 5);
+
+    </script>
+    <br/>
+    <br/>
+
+    2.What is the difference between while and for loop? when we use it?
+    <br/>
+    A while loop executes a block of code as long as a specified condition is true
+    <br/>
+    A for loop is used to create loops that run a specific number of times
+    <br/>
+    <script>
+        // Difference between while and for loop
+        let l = 0;
+        // While loop
+        while (l < 5) {
+            console.log(l);
+            l++;
+        }
+        
+        // For loop
+        for (let m = 0; m < 5; m++) {
+            console.log(m);
+        }
+    </script>
+    <br/>
+    <br/>
+
+    3. How do you break and continue a loop in JavaScript?
+    <br/>
+    A loop can be broken using the break statement
+    <br/>
+    A loop can be continued using the continue statement
+    <br/>
+    <script>
+        // Break statement
+        for (let n = 0; n < 5; n++) {
+            if (n === 2) {
+                break;
+            }
+            console.log(n);
+        }
+        
+        // Continue statement
+        for (let o = 0; o < 5; o++) {
+            if (o === 2) {
+                continue;
+            }
+            console.log(o);
+        }
+    </script>
+    <br/>
+    <br/>
+
+
+    4.difference between while and do-while loop?
+    <br/>
+    A while loop executes a block of code as long as a specified condition is true
+    <br/>
+    A do-while loop executes a block of code once, then checks a specified condition before repeating the block
+    <br/>
+    <script>
+        // Difference between while and do-while loop
+        let p = 0;
+        
+        // While loop
+        while (p < 5) {
+            console.log(p);
+            p++;
+        }
+        
+        // Do-while loop
+        do {
+            console.log(p);
+            p++;
+        } while (p < 5);
+
+    </script>
+    <br/>
+    <br/>
+
+
+
+    5.What is the difference between for and for...of loop in js?<br/>
+    A for loop is used to create loops that run a specific number of times
+    <br/>
+    A for...of loop is used to iterate over iterable objects like arrays, strings, etc.
+    <br/>
+    <script>
+        // Difference between for and for...of loop
+        let q = [1, 2, 3, 4, 5];
+        
+        // For loop
+        for (let r = 0; r < q.length; r++) {
+            console.log(q[r]);
+        }
+        
+        // For...of loop
+        for (let s of q) {
+            console.log(s);
+        }
+    </script>
+    <br/>
+    <br/>
+
+    6.what is the difference between forOf and ForIn loops in js?
+    <br/>
+    for...of loop is used to loop through the values of an object like arrays and strings
+    <br/>
+    it allows you to access each value directly without having to use and index.
+    <br/>
+    <script>
+        let arr =[1,2,3]
+        for(let val in arr){
+            console.log(val); // Outputs: 0, 1, 2
+        }
+    </script>
+    <br/>
+    for...in loop is used to loop through the properties of an object. 
+    <br/>
+    it allows u to iterate over trhe keys of an object and access the values associated by using keys as an index.
+    <script>
+        let obj = {a:1, b:2, c:3}
+        for(let prop in obj){
+            console.log(prop); // Outputs: a, b, c
+        }
+    </script>
+    <br/>
+    <br/>
+
+
+    7.What is the purpose of forEach method? compare it with for..of and for..in loop?<br/>
+    forEach method is used to iterate over each element in an array or object
+    <br/>
+    for..of loop is used to loop through the values of an iterable object like arrays, strings, etc.
+    <br/>
+    for..in loop is used to iterate over the properties of an object.
+    <br/>
+    <script>
+        console.log("..")
+        let arr1 = [1,2,3]
+        arr1.forEach(function(value, index, array){
+            console.log(value, index, array);
+        });
+        console.log("..")
+        // for..of loop
+        for(let val of arr1){
+            console.log(val);
+        }
+        console.log("..")
+        // for..in loop
+        for(let prop in arr1){
+            console.log(prop);
+        }
+    </script>
+    <br/>
+    <br/>
+
+
+    8. When to use for..of loop and when to use forEach method in applications?
+    <br/>
+    forEach method is suitable when you want to perform an action on each element of an array without using a loop.e continue or break statement here...
+    <br/>
+    for..of loop is suitable when you want to iterate over the values of an iterable object like arrays, strings, etc.
+    <br/>
+    <br/>
+
+    9. How to use map, filter and reduce methods in JavaScript?
+    <br/>
+    map method is used to create a new array with the results of calling a provided function on every element in the calling array.
+    <br/>
+    filter method is used to create a new array with all elements that pass the test implemented by the provided function.
+    <br/>
+    reduce method is used to reduce an array to a single value (the initialValue if provided; else, the first element in the array).
+    <br/>
+    <script>
+        // Map method
+        let arr2 = [1,2,3,4,5];
+        let doubledArr = arr2.map(function(value){
+            return value * 2;
+        });
+        console.log(doubledArr);
+        
+        // Filter method
+        let filteredArr = arr2.filter(function(value){
+            return value % 2 === 0;
+        });
+        console.log(filteredArr)
+        // Reduce method
+        let sum = arr2.reduce(function(accumulator, currentValue){
+            return accumulator + currentValue;
+        }, 0);
+        console.log(sum);
+    </script>
+
+
+
+
+
+
+
+    
+</body>
+</html>

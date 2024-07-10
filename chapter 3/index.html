@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    1.What are operators? what are the types of operators?
+    <br/>
+    Operators are used to perform specific operations on variables and values. There are two types of operators:
+    <br/>
+    a. Arithmetic operators: +, -, *, /, %
+    <br/>
+    b. Assignment operators: =, +=, -=, *=, /=, %=, **=
+    <br/>
+    <br/>
+
+
+    2.What is operator precedence?
+    <br/>
+    Operator precedence determines the order in which operators are evaluated when there are multiple operators with the same precedence.
+    <br/>
+    BODMAS rule
+    <br/>
+
+    <script>
+        let a = 6;
+        let b=3;
+        let c=2;
+
+        let res = a+b * c+ (a-b)
+        console.log(res); // Output: 15
+    </script>
+    <br/>
+    <br/>
+
+
+    3. what is the difference between unary , binary and turnary operators
+    <br/>
+    Unary operators : 
+    <br/>
+    a. Increment and decrement operators (++, --)
+    <br/>
+    b. Unary plus (+) and unary minus (-)
+    <br/>
+    Binary operators :
+    <br/>
+    a. Arithmetic operators (+, -, *, /, %, **)
+    <br/>
+    b. Assignment operators (=, +=, -=, *=, /=, %=, **=)
+    <br/>
+    c. Comparison operators (==,!=, >, <, >=, <=)
+    <br/>
+    d. Logical operators (&&, ||,!)
+    <br/>
+    e. Bitwise operators (&, |, ^, ~, <<, >>)
+    <br/>
+    Turnary operators :
+    <br/>
+    a. Conditional (ternary) operator (condition? value1 : value2)
+    <script>
+        let num = 5;
+        let result = num > 3? "Greater than 3" : "Less than or equal to 3";
+        console.log(result); // Output: Greater than 3
+    </script>
+    <br/>
+    <br/>
+
+
+    4. What is the short circuit evaluation in js?
+    <br/>
+    <script>
+        let result1 = false && someFunction();
+        console.log(result1) //false
+
+        let result2 = true || someFunction();
+        console.log(result2) // true
+    </script>
+    Short-crcuit evaluation stops the execution as soon as the result can be determined without evalutaing the remaining sub-expressions
+    <br/>
+    <br/>
+
+
+
+    5. What is the difference between '==' and '==='?
+    <br/>
+    '==' checks if two values are equal, but it converts the data types of both values before comparison.
+    <br/>
+    '===' checks if two values are equal and have the same data type.
+    <br/>
+    <script>
+        let a1 = 10;
+        let b1 = '10';
+        console.log(a1 == b1); // Output: true
+        console.log(a1 === b1); // Output: false
+        console.log(a1 == String(b1)); // Output: true
+        console.log(a1 === String(b1)); // Output: false
+        console.log(Number(b1) == a1); // Output: true
+        console.log(Number(b1) === a1); // Output: true
+        console.log(Number(b1) === String(a1)); // Output: false
+        console.log(Number(b1) == String(a1)); // Output: true
+        console.log(Number(b1) === String(a1)); // Output: false
+        console.log(Number(b1) === +b); // Output: true
+        console.log(Number(b1) === +String(a1)); // Output: true
+    </script>
+
+    <br/>
+    <br/>
+
+    6. What are the types of conditional statement in js?
+    <br/>
+    a. If statement
+    <br/>
+    b. If...else statement
+    <br/>
+    c. Switch statement
+    <br/>
+    <script>
+        let num1 = 5;
+        if (num1 > 3) {
+            console.log("Greater than 3");
+        } else {
+            console.log("Less than or equal to 3");
+        }
+
+        let num2 = 3;
+        if (num2 > 3) {
+            console.log("Greater than 3");
+        } else if (num2 < 3) {
+            console.log("Less than 3");
+        } else {
+            console.log("Equal to 3");
+        }
+
+
+        let num3 = 3;
+        switch (num3) {
+            case 1:
+                console.log("One");
+                break;
+            case 2:
+                console.log("Two");
+                break;
+            case 3:
+                console.log("Three");
+                break;
+            default:
+                console.log("Unknown");
+        }
+
+
+        let num4 = 3;
+        switch (true) {
+            case num4 > 3:
+                console.log("Greater than 3");
+                break;
+            case num4 < 3:
+                console.log("Less than 3");
+                break;
+            default:
+                console.log("Equal to 3");
+        }
+
+
+
+
+    </script>
+    <br/>
+    <br/>
+
+    7. What is the difference between Spread and Rest Operator in js?
+    <br/>
+    Spread operator (...):
+    <br/>
+    it is used to expand or spread the elements from an iterable ( array , object , string ) into individual elements
+    <script>
+        let arr1 = [1, 2, 3];
+        let arr2 = [...arr1];
+        console.log(arr2); // Output: 1,2,3
+    </script>
+    <br/>
+    uses:- 1. copying an array
+    <script>
+        const originalArray =[1,2,3]
+        const copyArray = [...originalArray]
+        console.log(copyArray) // Output: [1,2,3]
+    </script>
+    <br/>
+    uses:-2.merging Arrays:-
+    <br/>
+    it is used to combine multiple arrays into a single array
+    <script>
+        let arr3 = [4, 5, 6];
+        let arr4 = [...arr1,...arr3];
+        console.log(arr4); // Output: 1,2,3,4,5,6
+    </script>
+    <br/>
+    uses:-3.Passing Multiple arguments to a function
+    <script>
+        function sum(...nums) {
+            return nums.reduce((acc, curr) => acc + curr, 0);
+        }
+        console.log(sum(1, 2, 3, 4, 5)); // Output: 15
+    </script>
+    <br/>
+    <br/>
+
+    Rest Operator:-
+    <br/>
+    the rest operator is used in function parameters to collect all the remaining arguments into an arrays
+    <script>
+        function sum(first , second,...nums) {
+            console.log(first)//1
+            console.log(second)//2
+            return nums.reduce((acc, curr) => acc + curr, 0);
+        }
+        console.log(sum(1, 2, 3, 4, 5)); //12
+    </script>
+    <br/>
+    <br/>
+
+
+
+    
+
+    
+
+     
+
+
+
+</body>
+</html>

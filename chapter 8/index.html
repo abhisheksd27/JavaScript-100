@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+
+    1. What is DOM ? what is the difference between DOm and HTML?
+    <br/>
+    DOM stands for Document Object Model. It is a programming interface for HTML and XML documents.<br/>
+    It defines the logical structure of documents and the way a document is accessed and manipulated.<br/>
+    Difference between DOM and HTML:<br/>
+    - DOM is a programming interface for HTML and XML documents.<br/>
+    - HTML is a markup language for creating web pages.<br/>
+    
+
+    <script>
+        // Accessing elements using DOM
+        let element = document.getElementById("myId");
+        console.log(element);
+    </script>
+    <br/>
+    <br/>
+
+
+    2. how do you select, modify or remove DOM elements?
+    <br/>
+    - Selecting elements: You can use the `getElementById()`, `getElementsByClassName()`, `getElementsByTagName()`, `querySelector()`, and `querySelectorAll()` methods to select elements in a document.
+    <br/>
+    - Modifying elements: You can modify the content, attributes, styles, and other properties of elements using JavaScript.
+    <br/>
+    - Removing elements: You can remove elements from the DOM using the `removeChild()` method.
+    <br/>
+    <br/>
+
+
+    3. What are selectors in JS?
+    <br/>
+    Selectors are used to select HTML elements based on their attributes, class names, or other criteria.
+    <br/>
+    <br/>
+
+
+    4. what is the difference between getElementById()`, `getElementsByClassName()`, `getElementsByTagName()`, `querySelector()`, and `querySelectorAll()`
+    <br/>
+    - `getElementById()`: Selects the element with the specified ID.<br/>
+    - `getElementsByClassName()`: Selects all elements with the specified class name.<br/>
+    - `getElementsByTagName()`: Selects all elements with the specified tag name.<br/>
+    - `querySelector()`: Selects the first element that matches the specified selector.<br/>
+    - `querySelectorAll()`: Selects all elements that match the specified selector.<br/>
+    <br/>
+    <br/>
+
+
+    5. what are the methods to modify elements properties and attributes?
+    <br/>
+
+    - `setAttribute()`: Sets the value of an attribute on an element.<br/>
+    - `removeAttribute()`: Removes an attribute from an element.<br/>
+    - `innerHTML`: Sets or gets the HTML content of an element.<br/>
+    - `textContent`: Sets or gets the text content of an element.<br/>
+    - `style`: Allows you to access and modify the inline styles of an element.<br/>
+    <br/>
+    <script>
+        // let element = document.getElementById("myId");
+        // element.innerHTML = "New Content";
+        // element.style.color = "red";
+        // element.setAttribute("data-attribute", "value");
+        // element.removeAttribute("data-attribute");
+    </script>
+    <br/>
+    <br/>
+
+
+    6. what is the difference between innerHTML and textContent
+    <br/>
+    - `innerHTML`: Gets or sets the HTML content of an element. It interprets HTML tags and scripts.<br/>
+    - `textContent`: Gets or sets the text content of an element. It does not interpret HTML
+    tags and scripts.<br/>
+
+    <br/>
+    
+
+    7. how to add or remove properties of HTMl eemnts in the dom?
+    <br/>
+    - You can add or remove properties of HTML elements in the DOM using JavaScript. For example, you can add a new attribute to an element using `setAttribute()` and remove an attribute using `removeAttribute()`.
+    <br/>
+    <script>
+        // let element = document.getElementById("myId");
+        // element.setAttribute("data-attribute", "value");
+        // element.removeAttribute("data-attribute");
+    </script>
+    <br/>
+    <br/>
+
+    8. how to add or remove style of html elements in the dom isng JS?
+    <br/>
+    - You can add or remove styles of HTML elements in the DOM using JavaScript. 
+    For example, you can add a new style using `style.property = value` and remove a style using `style.property = ""`.
+    <br/>
+    <script>
+        // let element = document.getElementById("myId");
+        // element.style.color = "red";
+        // element.style.color = "";
+    </script>
+    <br/>
+    <br/>
+
+    9. How to create new elements in DOm using JS? What is the difference between createElement() and CloneNode()? 
+    <br/>
+    - `createElement()`: Creates a new element with the specified tag name.<br/>
+    <script>
+        // let element = document.createElement("div");
+        // element.id = "newDiv";
+        // element.textContent = "New Div";
+        // document.body.appendChild(element);
+    </script>
+    <br/>
+    - `cloneNode()`: Creates a copy of an existing node (including its event listeners and child nodes).<br/>
+    <script>
+        // let element = document.getElementById("myId");
+        // let clone = element.cloneNode(true);
+        // document.body.appendChild(clone);
+    </script>
+    <br/>
+    <br/>
+
+    10. what is the difference between createElement and createTextNode in JS?
+    <br/>
+    - `createElement()`: Creates a new element with the specified tag name.<br/>
+    - `createTextNode()`: Creates a new Text node with the specified text content.<br/>
+    <script>
+        // let element = document.createElement("div");
+        // let text = document.createTextNode("New Div");
+        // element.appendChild(text);
+        // document.body.appendChild(element);
+    </script>
+
+
+
+
+    
+
+    
+</body>
+</html>

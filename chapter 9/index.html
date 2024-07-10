@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+
+    1. what is Error handling in JS?
+    <br/>
+    Error handling is a mechanism in JavaScript to handle runtime errors and prevent the program from crashing.
+     It involves identifying and handling errors gracefully, allowing the program to continue running 
+     and providing useful feedback to the user.
+    <br/>
+    <script>
+        // Example of throwing an error
+        let x = 10;
+        if (x > 10) {
+            throw new Error("Value is greater than 10");
+        }
+
+        // Example of handling an error
+        try {
+            let y = 10;
+            if (y > 10) {
+                throw new Error("Value is greater than 10");
+            }
+        } catch (error) {
+            console.error("An error occurred:", error.message);
+        }
+    </script>
+    <br/>
+    <br/>
+
+
+    2. what is the role of finally block in JS?
+    <br/>
+    The finally block is a block of code that always executes, whether an error occurred or not.<br/>
+    It is used to perform cleanup operations, such as closing database connections or releasing resources.<br/>
+    <script>
+        try {
+            let z = 10;
+            if (z > 10) {
+                throw new Error("Value is greater than 10");
+            }
+        } catch (error) {
+            console.error("An error occurred:", error.message);
+        } finally {
+            console.log("Finally block executed");
+        }
+    </script>
+    <br/>
+    <br/>
+
+    3. what is the purpose of throw statement in JS?
+    <br/>
+    The throw statement is used to manually throw an error. 
+    It can be used to terminate the execution of a function 
+    and pass control to the nearest enclosing try...catch block.<br/>
+    <script>
+        let a = 10;
+        if (a > 10) {
+            throw new Error("Value is greater than 10");
+        }
+        console.log("This line will not be executed");
+        // The following line will throw an error
+        // throw "Value is greater than 10";
+    </script>
+
+    <br/>
+    <br/>
+
+
+    4. what is Error propagation in JS?<br/>
+    Ans:- Error propagation refers to the process of passing or propagating an error from one part of the code to another by using the throw statement with try and catch.<br/>
+    <script>
+        try {
+            let b = 10;
+            if (b > 10) {
+                throw new Error("Value is greater than 10");
+            }
+            console.log("This line will not be executed");
+        } catch (error) {
+            console.error("An error occurred:", error.message);
+        }
+    </script>
+
+    <br/>
+    <br/>
+
+    5. What are the best practices for error handling?
+    <br/>
+    Best practices for error handling in JavaScript include:<br/>
+    a. Use descriptive error messages<br/>
+    b. Handle errors gracefully<br/>
+    c. Log errors for debugging purposes<br/>
+    d. Use try...catch blocks<br/>
+    e. Use finally blocks for cleanup operations<br/>
+    f. Throw specific error types for different error scenarios<br/>
+    g. Use Promises and async/await for handling asynchronous operations<br/>
+    h. Use error boundaries to catch errors in nested components<br/>
+    i. Use error boundaries to catch errors in server-side rendering<br/>
+    j. Use try...finally blocks for cleanup operations<br/>
+
+    <br/>
+    <br/>
+
+    6. What are the different types of errors in JS?<br/>
+    Types of errors in JavaScript include:<br/>
+    a. Syntax errors<br/>
+    <script>
+        let c = 10;
+        console.log(c + "hello"); // Syntax error
+    </script>
+    b. Logical errors<br/>
+    <script>
+        let d = 10;
+        console.log(d / 0); // Logical error
+    </script>
+    c. Type errors<br/>
+    <script>
+        let e = "hello";
+        console.log(e + 10); // Type error
+    </script>
+    d. Reference errors<br/>
+    <script>
+        let f;
+        console.log(f); // Reference error
+    </script>
+    e. Range errors<br/>
+    <script>
+        let g = 10;
+        console.log(g.toFixed(11)); // Range error
+    </script>
+
+    <br/>
+    <br/>
+
+
+
+
+
+
+
+    
+</body>
+</html>

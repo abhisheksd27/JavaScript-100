@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+
+    1. What are events? how are events triggered?<br/>
+    Ans:-<br/>
+    Events are actions that occur in a web page, such as button clicks, mouse movements, or keyboard inputs.
+    <br/>When an event occurs, the associated event handler is called. Events can be triggered manually
+    <br/> (e.g., using the `onclick` attribute) or automatically (e.g., when a user interacts with a web page).<br/>
+
+    <script>
+        // Example of a click event
+        // document.getElementById("myButton").addEventListener("click", function() {
+        //     console.log("Button clicked!");
+        // });
+    </script>
+    <br/>
+    <br/>
+
+
+    2. What is Event Object in js?.<br/>
+    Ans:-<br/>
+    The Event object represents an event that takes place in a document or window. It provides information about the event, such as its type, target element, and coordinates.<br/>
+    <br/>The Event object is created automatically when an event occurs, and it is passed as 
+    an argument to the event handler function.<br/>
+    <script>
+        function logEvent(event) {
+            console.log("Event type:", event.type);
+            console.log("Target element:", event.target);
+            console.log("Event coordinates:", event.clientX, event.clientY);
+        }
+    </script>
+
+    <br/>
+    <br/>
+
+    3. What is Event Delegation in js?<br/>
+    Ans:-<br/>
+    Event delegation is a technique used to handle events on a parent element instead of each individual child element. 
+    By attaching a single event listener to the parent element, you can handle events for multiple child elements, 
+    reducing the number of event listeners and improving performance.<br/>
+    
+    <script>
+        function logEvent(event) {
+            console.log("Event type:", event.type);
+            console.log("Target element:", event.target);
+        }
+    </script>
+
+    <br/>
+    <br/>
+
+
+    4. What is event Bubbling in js?<br/>
+    Ans:-<br/>
+    Event bubbling is a concept in which events propagate up the DOM tree from the target element to the parent element.<br/>
+    example:- <br/>
+    <div id="parent">
+        <div id="child">Click me</div>
+    </div>
+    <script>
+        document.getElementById("child").addEventListener("click", function(event) {
+            console.log("Event bubbling:", event.target.id);
+        });
+    </script>
+
+    <br/>
+    <br/>
+
+
+    5. How can u stop event propagation or event bubbling?.<br/>
+    Ans:-<br/>
+    To stop event propagation, you can use the `stopPropagation()` method on the event object.<br/>
+    To stop event bubbling, you can use the `cancelBubble` property and set it to `true`.<br/>
+    <script>
+        document.getElementById("child").addEventListener("click", function(event) {
+            event.stopPropagation();
+            console.log("Event propagation stopped.");
+        });
+    </script>
+    <br/>
+    <br/>
+
+    6. What is event Capturing in js?<br/>
+    Ans:-<br/>
+    Event capturing is a concept in which events propagate down the DOM tree from the parent element to the target element.<br/>
+    example:- <br/>
+    <div id="parent">
+        <div id="child">Click me</div>
+    </div>
+    <script>
+        document.getElementById("parent").addEventListener("click", function(event) {
+            console.log("Event capturing:", event.target.id);
+        });
+    </script>
+    <br/>
+    <br/>
+
+    7. What is the purpose of the event.preventDefault() method in js?<br/>
+    Ans:-<br/>
+    The `event.preventDefault()` method cancels the event if it is cancelable, meaning that the default action that would otherwise occur for the event will not occur.<br/>
+    example:- <br/>
+    <a href="https://example.com" onclick="event.preventDefault(); console.log('Link clicked');">Click me</a>
+
+    <br/>
+    <br/>
+
+
+    8. What is the use of "this" keyword in the context of event handling in js?<br/>
+    Ans:-<br/>
+    The `this` keyword refers to the current object in which the function is being executed. In event handling, `this` refers to the element that received the event.<br/>
+    example:- <br/>
+    <button onclick="console.log(this.tagName);">Click me</button>
+    <br/>
+    <br/>
+
+
+    9.How to remove an event handler from an element in js?
+    Ans:-<br/>
+    To remove an event handler from an element, you can use the `removeEventListener()` method. The method takes two arguments: the event type and the event handler function.<br/>
+    example:- <br/>
+    <button onclick="console.log('Button clicked');">Click me</button>
+    <script>
+        const button = document.querySelector("button");
+        button.removeEventListener("click", function() {
+            console.log("Button clicked");
+        });
+    </script>
+
+
+
+    
+
+
+    
+</body>
+</html>

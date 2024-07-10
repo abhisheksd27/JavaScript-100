@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    1. what are functions in JS? what are the types of functions?
+    <br/>
+    Ans:- A function is a reusable piece of code that performs a specific task
+    <br/>
+    Types of functions in JavaScript:
+    <br/>
+    - Named functions
+    - Arrow functions
+    - Function expressions
+    - anonymous function
+    - IIFE
+    - Callback function
+    - higher-Order Function
+    <br/>
+    <br/>
+
+
+    2. What is the difference between named and anonymous functions? when to use?
+    <br/>
+    Ans:- Named function have a name identifier
+    <script>
+        function greet() {
+            console.log("Hello World!");
+        }
+        greet();
+    </script>  
+    <br/>
+    Anonymous function does not have a name identifier. and cannot be referenced directly by name
+    <script>
+        console.log(function(a,b){
+            return a + b;
+        }(4,5))
+    </script>  
+    <br/>
+    USe named function for bug and complex logics and when you want to reuse
+    <br/>
+    USe anonymous function for simple and small logics and use when u want use a function in a single place
+    <br/>
+    <br/>
+
+
+    3. What is a function expression in JS?
+    <br/>
+    Ans:- Function expression is a function definition that is stored in a variable
+    <script>
+        var myFunction = function(a, b) {
+            return a + b;
+        };
+        console.log(myFunction(4, 5)); // Output: 9
+    </script>
+    <br/>
+    <br/>
+
+
+    4. What are Arrow Function in Js? what is it use?
+    <br/>
+    Ans:- It is a simpler and shorter way for defining functions in JS.
+    <br/>
+    Arrow function syntax: (parameters) => expression
+    <script>
+        const add = (a, b) => a + b;
+        console.log(add(4, 5)); // Output: 9
+    </script>
+    <br/>
+    <br/>
+
+
+    5 . What are callback Functions? what is it use?
+    <br/>
+    Ans:- Callback function is a function passed as an argument to another function.
+    <br/>
+    Callback function syntax: functionName(argument, callbackFunction)
+    <script>
+        // Define the callback function
+        function displayMessage(message) {
+            console.log(message);
+        }
+
+        // Function that takes a message and a callback function
+        function printMessage(callback) {
+            const message = "Hello, world!";
+            callback(message);
+        }
+
+        // Use the printMessage function with the displayMessage callback
+        printMessage(displayMessage);
+    </script>
+    <br/>
+
+    <br/>
+
+
+    6. What is the Higher-order function in JS?
+    <br/>
+    Ans:- A higher-order function is a function that either takes one or more functions as arguments or
+    returns a function as its result.
+    <br/>
+    <br/>
+
+    7. How to create a self-invoking anonymous function in JS?
+    <br/>
+    Ans:- A self-invoking anonymous function is a function that is executed immediately after being defined.
+    <script>
+        (function() {
+            console.log("Hello, world!");
+        })();
+    </script>
+    <br/>
+    <br/>
+
+
+    8. what is the difference between parameter and arguments?
+    <br/>
+    Ans:- Parameter is a variable that is declared in the function signature, and arguments are the actual values passed to the function.        
+    <br/>
+    <br/>
+    
+    9. In how many ways you can pass arguments to a functions?
+    <br/>
+    Ans:- There are 3 ways to pass arguments to a function in JavaScript:
+    <br/>
+    - positional arguments
+    <br/>
+    <script>
+        function greet(name) {
+            console.log("Hello, " + name);
+        }
+        greet("John Doe"); // Positional arguments
+    </script>
+    - Named arguments
+    <br/>
+    <script>
+        function greet(person) {
+            console.log("Hello, " + person.name);
+        }
+        const person = { name: "John Doe" };
+        greet(person); 
+    </script>
+    - Argument Object
+    <br/>
+    <script>
+        sum(1,2,3)
+        function sum(){
+            console.log(arguments[0]);
+            console.log(arguments[1]);
+        }
+    </script>
+    <br/>
+    <br/>
+
+
+    10. How do use defaulkt parameters in a functions?
+    <br/>
+    Ans:- Default parameters are used to provide a default value for a parameter if no value is provided.
+    <script>
+        function greet(name = "Guest") {
+            console.log("Hello, " + name);
+        }
+        greet(); // Output: Hello, Guest
+        greet("John Doe"); // Output: Hello, John Doe
+    </script>
+    <br/>
+    <br/>
+
+    11.What is the use of event handling in Js?
+    <br/>
+    Ans:- Event handling is the process of responding to user actions by executing JavaScript code.
+    <br/>
+    <button id="myButton">click</button>
+    <script>
+        document.getElementById("myButton").addEventListener("click", function() {
+            console.log("Button clicked!");
+        });
+    </script>
+    <br/>
+    the addEventListener method of JS allows uto attach an event name and with the function you want to perform on that Event
+    
+
+    <br/>
+    <br/>
+
+    12. What are first class function in JS?
+    <br/>
+    Ans:- First class functions are functions that can be used as data.
+    <br/>
+    <script>
+        function greet(name) {
+            return `Hello, ${name}!`;
+        }
+        console.log(greet("John Doe")); // Output: Hello, John Doe
+
+        const sayHello = greet;
+        console.log(sayHello("Jane Doe")); // Output: Hello, Jane Doe
+        sayHello("Alice"); // Output: Hello, Alice
+
+
+        const greetings = [greet, sayHello];    
+        greetings.forEach(function(func) {
+            console.log(func("Bob"));
+        });
+    </script>
+    <br/>
+    <br/>
+
+
+    13. what are Pure and Impure Functions?
+    <br/>
+    Ans:- Pure functions are functions that always return the same output for the same input and have no side effects. and it cannot modify the state 
+    <br/>
+    <script>
+        function add2(a, b) {
+            return a + b;
+        }
+        console.log(add2(2, 3)); // Output: 5
+
+    </script>
+    Impure functions can have side effects, such as modifying global variables, logging to the console, or making HTTP requests. and it can modify the state
+    <br/> 
+    <script>
+        let counter = 0;
+        function incrementCounter() {
+            counter++;
+            console.log(counter);
+        }
+        incrementCounter(); // Output: 1
+        incrementCounter(); // Output: 2
+    </script>
+    <br/>
+    <br/>
+
+
+    14. What is function currying in JS?<br/>
+    Ans:- Function currying is a technique of transforming a function with multiple arguments into a sequence of functions, each accepting a single argument.
+    <br/>
+    <script>
+        // Curried function for adding numbers
+        function add3(a) {
+            return function(b) {
+                return a + b;
+            };
+        }
+
+        // Using the curried function
+        const addFive = add3(5); // Returns a function that adds 5 to its argument
+        const result = addFive(3); // Calls the function with 3
+
+        console.log(result); // Output: 8
+
+        
+    </script>
+    <br/>
+    Advatages:- 
+    - It makes the code more readable and easier to maintain.
+    - It can be used to create more flexible and reusable functions.
+    - It can help to avoid errors by ensuring that the correct arguments are passed to the function.
+
+    <br/>
+    <br/>
+
+
+
+    15. what are call , apply and bind in JS?
+    <br/>
+    Ans:- Call, apply and bind are methods of Function.call(), Function.apply() and Function.bind() respectively.
+    <br/>
+    Call method: This method calls a function with a given this value and arguments provided individually.
+    <br/>
+    <script>
+        function greet(name) {
+            console.log(`Hello, ${name}!`);
+        }
+        const person1 = { name: "John Doe" };
+        greet.call(person1, "Alice"); // Output: Hello, Alice
+    </script>
+    <br/>
+    Apply method: This method calls a function with a given this value and arguments provided as an array.
+    <br/>
+    <script>
+        function sum(a, b) {
+            return a + b;
+        }
+        const numbers = [1, 2];
+        console.log(sum.apply(null, numbers)); // Output: 3
+    </script>
+    <br/>
+    Bind method: This method creates a new function that calls the specified function with a given this value and arguments provided individually. The this value is fixed to the specified value, and any additional arguments are provided as arguments to the new function.
+    <br/>
+    <script>
+        function greet(name) {
+            console.log(`Hello, ${name}!`);
+        }
+        const person2 = { name: "John Doe" };
+        const boundGreet = greet.bind(person2);
+        boundGreet("Alice"); // Output: Hello, Alice
+    </script>
+
+
+     
+
+
+    
+    
+    
+</body>
+</html>
